@@ -3,9 +3,14 @@ const mongoose = require('mongoose');
 const Contact = require('./models/contact.model.js'); 
 const contactRoute =require("./routes/contact.route.js");
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(cors()); //allow all origins (not recommended for production)
+
+
+
 
 
 // Base route
